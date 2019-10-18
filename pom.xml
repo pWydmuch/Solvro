@@ -12,7 +12,7 @@
     <artifactId>solvro</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>solvro</name>
-    <description>Project for recrutation to solvro</description>
+    <description>Project for recruitment to solvro</description>
 
     <properties>
         <java.version>1.8</java.version>
