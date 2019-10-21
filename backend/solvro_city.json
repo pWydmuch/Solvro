@@ -3,109 +3,79 @@
     "graph": {},
     "links": [
         {
-            "distance": 14,
+            "distance": 11,
             "source": 0,
-            "target": 2
+            "target": 5
         },
         {
-            "distance": 9,
+            "distance": 1,
             "source": 0,
-            "target": 4
-        },
-        {
-            "distance": 2,
-            "source": 0,
-            "target": 9
+            "target": 13
         },
         {
             "distance": 13,
             "source": 0,
-            "target": 16
-        },
-        {
-            "distance": 4,
-            "source": 0,
-            "target": 20
-        },
-        {
-            "distance": 16,
-            "source": 0,
-            "target": 27
+            "target": 18
         },
         {
             "distance": 7,
             "source": 0,
-            "target": 29
-        },
-        {
-            "distance": 2,
-            "source": 1,
-            "target": 6
-        },
-        {
-            "distance": 3,
-            "source": 1,
-            "target": 15
+            "target": 25
         },
         {
             "distance": 11,
             "source": 1,
-            "target": 25
+            "target": 5
         },
         {
-            "distance": 10,
-            "source": 2,
-            "target": 3
+            "distance": 6,
+            "source": 1,
+            "target": 7
         },
         {
-            "distance": 12,
-            "source": 2,
-            "target": 4
-        },
-        {
-            "distance": 20,
-            "source": 2,
+            "distance": 4,
+            "source": 1,
             "target": 9
         },
         {
-            "distance": 9,
-            "source": 2,
-            "target": 10
+            "distance": 15,
+            "source": 1,
+            "target": 11
         },
         {
-            "distance": 14,
-            "source": 2,
+            "distance": 1,
+            "source": 1,
+            "target": 13
+        },
+        {
+            "distance": 0,
+            "source": 1,
             "target": 14
+        },
+        {
+            "distance": 10,
+            "source": 1,
+            "target": 20
+        },
+        {
+            "distance": 1,
+            "source": 1,
+            "target": 24
+        },
+        {
+            "distance": 15,
+            "source": 2,
+            "target": 18
         },
         {
             "distance": 6,
             "source": 2,
-            "target": 20
+            "target": 19
         },
         {
-            "distance": 7,
-            "source": 2,
-            "target": 27
-        },
-        {
-            "distance": 7,
-            "source": 2,
-            "target": 28
-        },
-        {
-            "distance": 18,
+            "distance": 5,
             "source": 3,
             "target": 9
-        },
-        {
-            "distance": 16,
-            "source": 3,
-            "target": 10
-        },
-        {
-            "distance": 4,
-            "source": 3,
-            "target": 12
         },
         {
             "distance": 5,
@@ -113,29 +83,44 @@
             "target": 14
         },
         {
-            "distance": 5,
+            "distance": 0,
             "source": 3,
             "target": 17
         },
         {
-            "distance": 17,
-            "source": 3,
-            "target": 18
-        },
-        {
-            "distance": 20,
+            "distance": 1,
             "source": 3,
             "target": 20
         },
         {
-            "distance": 8,
+            "distance": 11,
             "source": 3,
-            "target": 29
+            "target": 21
         },
         {
-            "distance": 15,
+            "distance": 19,
+            "source": 3,
+            "target": 23
+        },
+        {
+            "distance": 20,
             "source": 4,
-            "target": 12
+            "target": 6
+        },
+        {
+            "distance": 3,
+            "source": 4,
+            "target": 7
+        },
+        {
+            "distance": 17,
+            "source": 4,
+            "target": 9
+        },
+        {
+            "distance": 1,
+            "source": 4,
+            "target": 10
         },
         {
             "distance": 5,
@@ -143,19 +128,19 @@
             "target": 16
         },
         {
-            "distance": 3,
+            "distance": 7,
             "source": 4,
-            "target": 23
+            "target": 17
         },
         {
-            "distance": 13,
+            "distance": 2,
             "source": 4,
             "target": 24
         },
         {
-            "distance": 12,
+            "distance": 0,
             "source": 4,
-            "target": 29
+            "target": 25
         },
         {
             "distance": 20,
@@ -163,387 +148,457 @@
             "target": 6
         },
         {
-            "distance": 19,
+            "distance": 16,
             "source": 5,
-            "target": 15
+            "target": 8
         },
         {
-            "distance": 18,
+            "distance": 8,
             "source": 5,
-            "target": 17
+            "target": 20
         },
         {
-            "distance": 9,
+            "distance": 0,
+            "source": 5,
+            "target": 26
+        },
+        {
+            "distance": 13,
             "source": 5,
             "target": 29
-        },
-        {
-            "distance": 7,
-            "source": 6,
-            "target": 9
-        },
-        {
-            "distance": 19,
-            "source": 6,
-            "target": 18
-        },
-        {
-            "distance": 5,
-            "source": 6,
-            "target": 21
-        },
-        {
-            "distance": 6,
-            "source": 6,
-            "target": 23
         },
         {
             "distance": 4,
             "source": 6,
-            "target": 29
-        },
-        {
-            "distance": 10,
-            "source": 7,
-            "target": 10
-        },
-        {
-            "distance": 10,
-            "source": 7,
-            "target": 13
-        },
-        {
-            "distance": 15,
-            "source": 7,
-            "target": 14
-        },
-        {
-            "distance": 2,
-            "source": 7,
-            "target": 19
-        },
-        {
-            "distance": 0,
-            "source": 7,
-            "target": 20
-        },
-        {
-            "distance": 3,
-            "source": 7,
-            "target": 28
-        },
-        {
-            "distance": 9,
-            "source": 8,
             "target": 17
         },
         {
             "distance": 14,
-            "source": 8,
+            "source": 6,
             "target": 18
         },
         {
-            "distance": 3,
-            "source": 8,
-            "target": 27
+            "distance": 19,
+            "source": 6,
+            "target": 23
         },
         {
             "distance": 2,
-            "source": 9,
+            "source": 7,
+            "target": 8
+        },
+        {
+            "distance": 13,
+            "source": 7,
+            "target": 11
+        },
+        {
+            "distance": 11,
+            "source": 7,
             "target": 12
         },
         {
-            "distance": 5,
-            "source": 9,
-            "target": 17
+            "distance": 12,
+            "source": 7,
+            "target": 25
         },
         {
-            "distance": 0,
-            "source": 9,
-            "target": 28
+            "distance": 2,
+            "source": 8,
+            "target": 10
         },
         {
-            "distance": 4,
-            "source": 10,
+            "distance": 13,
+            "source": 8,
+            "target": 15
+        },
+        {
+            "distance": 13,
+            "source": 8,
             "target": 16
         },
         {
-            "distance": 12,
-            "source": 10,
-            "target": 25
-        },
-        {
-            "distance": 7,
-            "source": 10,
-            "target": 27
+            "distance": 4,
+            "source": 8,
+            "target": 17
         },
         {
             "distance": 1,
-            "source": 10,
-            "target": 29
-        },
-        {
-            "distance": 7,
-            "source": 11,
-            "target": 13
-        },
-        {
-            "distance": 20,
-            "source": 11,
-            "target": 15
-        },
-        {
-            "distance": 20,
-            "source": 11,
-            "target": 23
-        },
-        {
-            "distance": 9,
-            "source": 11,
+            "source": 8,
             "target": 27
         },
         {
-            "distance": 1,
-            "source": 12,
-            "target": 14
-        },
-        {
-            "distance": 8,
-            "source": 12,
-            "target": 24
-        },
-        {
-            "distance": 9,
-            "source": 12,
-            "target": 25
-        },
-        {
-            "distance": 5,
-            "source": 12,
-            "target": 27
-        },
-        {
-            "distance": 16,
-            "source": 13,
-            "target": 25
-        },
-        {
-            "distance": 8,
-            "source": 13,
-            "target": 27
-        },
-        {
-            "distance": 18,
-            "source": 14,
-            "target": 15
-        },
-        {
-            "distance": 14,
-            "source": 14,
-            "target": 20
+            "distance": 6,
+            "source": 8,
+            "target": 28
         },
         {
             "distance": 3,
-            "source": 14,
+            "source": 9,
+            "target": 11
+        },
+        {
+            "distance": 14,
+            "source": 9,
+            "target": 13
+        },
+        {
+            "distance": 18,
+            "source": 9,
+            "target": 26
+        },
+        {
+            "distance": 1,
+            "source": 9,
+            "target": 27
+        },
+        {
+            "distance": 20,
+            "source": 9,
             "target": 29
+        },
+        {
+            "distance": 11,
+            "source": 10,
+            "target": 14
+        },
+        {
+            "distance": 13,
+            "source": 10,
+            "target": 15
+        },
+        {
+            "distance": 7,
+            "source": 10,
+            "target": 18
+        },
+        {
+            "distance": 19,
+            "source": 11,
+            "target": 17
+        },
+        {
+            "distance": 18,
+            "source": 11,
+            "target": 21
+        },
+        {
+            "distance": 10,
+            "source": 11,
+            "target": 24
+        },
+        {
+            "distance": 19,
+            "source": 11,
+            "target": 27
+        },
+        {
+            "distance": 2,
+            "source": 12,
+            "target": 15
+        },
+        {
+            "distance": 11,
+            "source": 12,
+            "target": 17
+        },
+        {
+            "distance": 8,
+            "source": 12,
+            "target": 19
+        },
+        {
+            "distance": 13,
+            "source": 12,
+            "target": 22
+        },
+        {
+            "distance": 6,
+            "source": 12,
+            "target": 23
+        },
+        {
+            "distance": 18,
+            "source": 12,
+            "target": 26
+        },
+        {
+            "distance": 17,
+            "source": 13,
+            "target": 14
+        },
+        {
+            "distance": 6,
+            "source": 13,
+            "target": 23
+        },
+        {
+            "distance": 6,
+            "source": 13,
+            "target": 25
+        },
+        {
+            "distance": 12,
+            "source": 14,
+            "target": 28
+        },
+        {
+            "distance": 15,
+            "source": 15,
+            "target": 17
+        },
+        {
+            "distance": 11,
+            "source": 15,
+            "target": 25
+        },
+        {
+            "distance": 0,
+            "source": 15,
+            "target": 26
+        },
+        {
+            "distance": 18,
+            "source": 15,
+            "target": 27
+        },
+        {
+            "distance": 6,
+            "source": 15,
+            "target": 28
         },
         {
             "distance": 13,
             "source": 15,
-            "target": 22
-        },
-        {
-            "distance": 16,
-            "source": 15,
-            "target": 24
-        },
-        {
-            "distance": 12,
-            "source": 16,
-            "target": 19
+            "target": 29
         },
         {
             "distance": 16,
             "source": 16,
-            "target": 26
-        },
-        {
-            "distance": 18,
-            "source": 17,
-            "target": 21
+            "target": 17
         },
         {
             "distance": 8,
-            "source": 17,
+            "source": 16,
+            "target": 20
+        },
+        {
+            "distance": 7,
+            "source": 16,
+            "target": 24
+        },
+        {
+            "distance": 16,
+            "source": 16,
             "target": 26
         },
         {
-            "distance": 14,
+            "distance": 3,
+            "source": 17,
+            "target": 20
+        },
+        {
+            "distance": 20,
+            "source": 17,
+            "target": 23
+        },
+        {
+            "distance": 9,
+            "source": 17,
+            "target": 24
+        },
+        {
+            "distance": 18,
+            "source": 18,
+            "target": 19
+        },
+        {
+            "distance": 11,
             "source": 18,
             "target": 25
         },
         {
-            "distance": 11,
-            "source": 19,
-            "target": 24
+            "distance": 15,
+            "source": 18,
+            "target": 29
         },
         {
             "distance": 10,
             "source": 19,
-            "target": 28
+            "target": 26
         },
         {
-            "distance": 17,
+            "distance": 8,
             "source": 20,
-            "target": 24
-        },
-        {
-            "distance": 18,
-            "source": 21,
             "target": 22
         },
         {
-            "distance": 11,
-            "source": 21,
-            "target": 28
+            "distance": 12,
+            "source": 20,
+            "target": 27
         },
         {
-            "distance": 1,
+            "distance": 0,
+            "source": 21,
+            "target": 23
+        },
+        {
+            "distance": 4,
+            "source": 21,
+            "target": 29
+        },
+        {
+            "distance": 16,
             "source": 22,
             "target": 24
         },
         {
-            "distance": 1,
+            "distance": 4,
+            "source": 22,
+            "target": 25
+        },
+        {
+            "distance": 5,
+            "source": 22,
+            "target": 26
+        },
+        {
+            "distance": 11,
             "source": 22,
             "target": 28
         },
         {
-            "distance": 20,
-            "source": 23,
-            "target": 29
+            "distance": 0,
+            "source": 24,
+            "target": 27
+        },
+        {
+            "distance": 8,
+            "source": 26,
+            "target": 28
         }
     ],
     "multigraph": false,
     "nodes": [
         {
             "id": 0,
-            "stop_name": "Przystanek Beznadziejny muczaczo"
+            "stop_name": "Przystanek Beznadziejny frontend developer"
         },
         {
             "id": 1,
-            "stop_name": "Przystanek Solvrowy backend developer"
+            "stop_name": "Przystanek Waleczny backend developer"
         },
         {
             "id": 2,
-            "stop_name": "Przystanek Zdenerwowany pythonowiec"
+            "stop_name": "Przystanek Solvrowy frontend developer"
         },
         {
             "id": 3,
-            "stop_name": "Przystanek Cudowny jamnik"
+            "stop_name": "Przystanek Waleczny student PWr"
         },
         {
             "id": 4,
-            "stop_name": "Przystanek Waleczny pythonowiec"
+            "stop_name": "Przystanek Waleczny muczaczo"
         },
         {
             "id": 5,
-            "stop_name": "Przystanek Beznadziejny muczaczo"
+            "stop_name": "Przystanek Przepraszaj\u0105cy programista"
         },
         {
             "id": 6,
-            "stop_name": "Przystanek Cudowny programista"
-        },
-        {
-            "id": 7,
-            "stop_name": "Przystanek Zasmucony muczaczo"
-        },
-        {
-            "id": 8,
-            "stop_name": "Przystanek Zdenerwowany jamnik"
-        },
-        {
-            "id": 9,
-            "stop_name": "Przystanek Cudowny muczaczo"
-        },
-        {
-            "id": 10,
-            "stop_name": "Przystanek Cudowny programista"
-        },
-        {
-            "id": 11,
-            "stop_name": "Przystanek Odwa\u017cny javascriptowiec"
-        },
-        {
-            "id": 12,
-            "stop_name": "Przystanek Solvrowy programista"
-        },
-        {
-            "id": 13,
-            "stop_name": "Przystanek Zdenerwowany jamnik"
-        },
-        {
-            "id": 14,
-            "stop_name": "Przystanek Dziki backend developer"
-        },
-        {
-            "id": 15,
-            "stop_name": "Przystanek Waleczny frontend developer"
-        },
-        {
-            "id": 16,
-            "stop_name": "Przystanek Mi\u0119sny pythonowiec"
-        },
-        {
-            "id": 17,
-            "stop_name": "Przystanek Zdenerwowany javascriptowiec"
-        },
-        {
-            "id": 18,
-            "stop_name": "Przystanek Waleczny kabanos"
-        },
-        {
-            "id": 19,
-            "stop_name": "Przystanek Zasmucony backend developer"
-        },
-        {
-            "id": 20,
-            "stop_name": "Przystanek Zdenerwowany muczaczo"
-        },
-        {
-            "id": 21,
-            "stop_name": "Przystanek Odwa\u017cny backend developer"
-        },
-        {
-            "id": 22,
-            "stop_name": "Przystanek Dziki backend developer"
-        },
-        {
-            "id": 23,
-            "stop_name": "Przystanek Solvrowy pythonowiec"
-        },
-        {
-            "id": 24,
-            "stop_name": "Przystanek Waleczny jamnik"
-        },
-        {
-            "id": 25,
-            "stop_name": "Przystanek Dziki muczaczo"
-        },
-        {
-            "id": 26,
             "stop_name": "Przystanek Beznadziejny student PWr"
         },
         {
+            "id": 7,
+            "stop_name": "Przystanek Mi\u0119sny programista"
+        },
+        {
+            "id": 8,
+            "stop_name": "Przystanek Zasmucony javascriptowiec"
+        },
+        {
+            "id": 9,
+            "stop_name": "Przystanek Waleczny jamnik"
+        },
+        {
+            "id": 10,
+            "stop_name": "Przystanek Dziki pythonowiec"
+        },
+        {
+            "id": 11,
+            "stop_name": "Przystanek Zdenerwowany jamnik"
+        },
+        {
+            "id": 12,
+            "stop_name": "Przystanek Dziki frontend developer"
+        },
+        {
+            "id": 13,
+            "stop_name": "Przystanek Mi\u0119sny muczaczo"
+        },
+        {
+            "id": 14,
+            "stop_name": "Przystanek Beznadziejny javascriptowiec"
+        },
+        {
+            "id": 15,
+            "stop_name": "Przystanek Przepraszaj\u0105cy pythonowiec"
+        },
+        {
+            "id": 16,
+            "stop_name": "Przystanek Beznadziejny backend developer"
+        },
+        {
+            "id": 17,
+            "stop_name": "Przystanek Waleczny kabanos"
+        },
+        {
+            "id": 18,
+            "stop_name": "Przystanek Waleczny javascriptowiec"
+        },
+        {
+            "id": 19,
+            "stop_name": "Przystanek Odwa\u017cny javascriptowiec"
+        },
+        {
+            "id": 20,
+            "stop_name": "Przystanek Odwa\u017cny backend developer"
+        },
+        {
+            "id": 21,
+            "stop_name": "Przystanek Zdenerwowany student PWr"
+        },
+        {
+            "id": 22,
+            "stop_name": "Przystanek Odwa\u017cny javascriptowiec"
+        },
+        {
+            "id": 23,
+            "stop_name": "Przystanek Dziki muczaczo"
+        },
+        {
+            "id": 24,
+            "stop_name": "Przystanek Zdenerwowany student PWr"
+        },
+        {
+            "id": 25,
+            "stop_name": "Przystanek Odwa\u017cny programista"
+        },
+        {
+            "id": 26,
+            "stop_name": "Przystanek Zdenerwowany pythonowiec"
+        },
+        {
             "id": 27,
-            "stop_name": "Przystanek Dziki javascriptowiec"
+            "stop_name": "Przystanek Zasmucony pythonowiec"
         },
         {
             "id": 28,
-            "stop_name": "Przystanek Zdenerwowany programista"
+            "stop_name": "Przystanek Mi\u0119sny programista"
         },
         {
             "id": 29,
-            "stop_name": "Przystanek Mi\u0119sny frontend developer"
+            "stop_name": "Przystanek Waleczny jamnik"
         }
     ]
 }

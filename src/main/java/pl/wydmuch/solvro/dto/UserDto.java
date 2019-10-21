@@ -3,11 +3,6 @@ package pl.wydmuch.solvro.dto;
 import pl.wydmuch.solvro.validators.ValidEmail;
 import pl.wydmuch.solvro.validators.ValidPassword;
 
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
-
 public class UserDto {
 
     @ValidEmail
