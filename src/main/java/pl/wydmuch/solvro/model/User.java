@@ -9,6 +9,7 @@ import javax.persistence.Id;
 
 @Entity
 public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -17,10 +18,6 @@ public class User {
 
     @JsonIgnore
     private String password;
-
-
-    public User() {
-    }
 
     public Long getId() {
         return id;

@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.annotation.AccessType;
 import org.springframework.stereotype.Service;
 import pl.wydmuch.solvro.dto.StopDto;
+import pl.wydmuch.solvro.model.Stop;
 import pl.wydmuch.solvro.repositories.StopRepository;
 
 import java.io.IOException;
@@ -21,9 +22,17 @@ public class StopService {
         this.stopRepository = stopRepository;
     }
 
-    public List<StopDto> findAllStops() throws IOException {
+    public List<StopDto> findAllStopsDto() throws IOException {
         return stopRepository.findAll().stream()
                 .map(StopDto::new)
                 .collect(Collectors.toList());
+    }
+
+    public List<Stop> findAllStops() throws IOException {
+        return stopRepository.findAll();
+    }
+
+    public Stop findStopByName(String name) throws IOException {
+        return stopRepository.findByName(name);
     }
 }

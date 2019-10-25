@@ -6,7 +6,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import pl.wydmuch.solvro.dto.PathDto;
 import pl.wydmuch.solvro.dto.StopDto;
+import pl.wydmuch.solvro.services.LinkService;
 import pl.wydmuch.solvro.services.StopService;
 
 import java.io.IOException;
@@ -18,16 +20,19 @@ public class StopController {
 
     StopService stopService;
 
+    LinkService linkService;
+
     @Autowired
-    public StopController(StopService stopService) {
+    public StopController(StopService stopService, LinkService linkService) {
         this.stopService = stopService;
+        this.linkService = linkService;
     }
 
     @GetMapping("/stops")
     public ResponseEntity<?> getStops(){
-        List<StopDto> stops = null;
+        List<StopDto> stops;
         try {
-            stops = stopService.findAllStops();
+            stops = stopService.findAllStopsDto();
             return new ResponseEntity<>(stops, HttpStatus.OK);
         } catch (IOException e) {
             return new ResponseEntity<>(e.getMessage(),HttpStatus.INTERNAL_SERVER_ERROR);
@@ -36,9 +41,14 @@ public class StopController {
     }
 
     @GetMapping("/path")
-    public ResponseEntity<List<StopDto>> findPath(@RequestParam("source") String source,
-                                                  @RequestParam("target") String target){
-        List<StopDto> stops = new ArrayList<>();
-        return new ResponseEntity<>(stops, HttpStatus.OK);
+    public ResponseEntity<?> findPath(@RequestParam("source") String source,
+                                      @RequestParam("target") String target){
+        try {
+            PathDto shortestPath = linkService.getShortestPath(source, target);
+            return new ResponseEntity<>(shortestPath, HttpStatus.OK);
+        } catch (IOException e) {
+            return new ResponseEntity<>(e.getMessage(),HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+
     }
 }
