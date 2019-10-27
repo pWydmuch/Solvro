@@ -1,9 +1,26 @@
 package pl.wydmuch.solvro.domain;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
-public class Graph <T> {
+public class Graph {
+    private final List<Vertex> vertexes;
+    private final List<Edge> edges;
 
-    private Set<T> nodes = new HashSet<>();
+    public Graph(List<Vertex> vertexes, List<Edge> edges) {
+        this.vertexes = vertexes;
+        this.edges = edges;
+    }
+
+    public List<Vertex> getVertexes() {
+        return vertexes;
+    }
+
+    public List<Edge> getEdges() {
+        return edges;
+    }
+
+
+
+
+
 }
