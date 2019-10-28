@@ -58,9 +58,6 @@ By móc umożliwić komunikacje między tymi dwoma kontenerami użyłem Docker C
 aplikacja chciała się połączyć z bazą danych, gdy jeszcze ona wstawała, co powodowło błąd.
 By rozwiązać ten problem użyłem skryptu 'wait-for-it.sh', który nie pozwala odpalić się aplikacji, jeśli baza danych jeszcze nie jest gotowa.
 
-W bazie danych jest już przykładowy użytkownik
-```email: user@user.pl, password: zaq1@WSX```
-
 By umożliwić połączenie aplikacji z frontendem udostępniłem endpointy dla wszystkich originów, czego oczywiście nie powinno się robić w prawdziwych aplikacjach, ale zwiększa przenaszalności aplikacji.
  
 ### Co chiałbym jeszcze zrobić
