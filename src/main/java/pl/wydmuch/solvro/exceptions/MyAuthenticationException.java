@@ -1,4 +1,9 @@
 package pl.wydmuch.solvro.exceptions;
 
-public class AuthenticationException {
+
+
+public class MyAuthenticationException extends Exception {
+    public MyAuthenticationException(String message, Throwable cause) {
+        super(message, cause);
+    }
 }

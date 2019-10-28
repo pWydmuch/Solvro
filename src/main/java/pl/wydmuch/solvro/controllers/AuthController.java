@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import pl.wydmuch.solvro.configuration.JwtTokenUtil;
+import pl.wydmuch.solvro.exceptions.MyAuthenticationException;
 import pl.wydmuch.solvro.exceptions.UserAlreadyExistsException;
 import pl.wydmuch.solvro.dto.UserDto;
 import pl.wydmuch.solvro.model.JwtRequest;
@@ -41,30 +42,23 @@ public class AuthController {
     @PostMapping("/registration")
     public ResponseEntity<?> register(@RequestBody
                                       @ApiParam(required = true, value = "JSON with username password and email")
-                                      @Valid UserDto user) {
-        System.out.println(user);
-        try {
-            userService.registerNewUser(user);
-        } catch (UserAlreadyExistsException e) {
-            return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
-        }
+                                      @Valid UserDto user) throws UserAlreadyExistsException {
+
+
+        userService.registerNewUser(user);
         return new ResponseEntity<>(user, HttpStatus.CREATED);
     }
 
     @PostMapping("/login")
-    public ResponseEntity<?> login(@RequestBody JwtRequest authenticationRequest) {
+    public ResponseEntity<?> login(@RequestBody JwtRequest authenticationRequest) throws MyAuthenticationException {
 
-        try {
-            System.out.println(authenticationRequest);
-            userService.authenticate(authenticationRequest.getEmail(), authenticationRequest.getPassword());
-            final UserDetails userDetails = userService
-                    .loadUserByUsername(authenticationRequest.getEmail());
-            final String token = jwtTokenUtil.generateToken(userDetails);
-            return new ResponseEntity<>(new JwtResponse(token),HttpStatus.OK);
-        } catch (Exception e) {
-            return new ResponseEntity(e.getMessage(), HttpStatus.UNAUTHORIZED);
-        }
+        userService.authenticate(authenticationRequest.getEmail(), authenticationRequest.getPassword());
+        final UserDetails userDetails = userService
+                .loadUserByUsername(authenticationRequest.getEmail());
+        final String token = jwtTokenUtil.generateToken(userDetails);
+        return new ResponseEntity<>(new JwtResponse(token), HttpStatus.OK);
 
     }
 
 }
+

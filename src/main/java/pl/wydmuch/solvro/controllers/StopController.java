@@ -10,9 +10,7 @@ import pl.wydmuch.solvro.dto.PathDto;
 import pl.wydmuch.solvro.dto.StopDto;
 import pl.wydmuch.solvro.services.LinkService;
 import pl.wydmuch.solvro.services.StopService;
-
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -29,26 +27,18 @@ public class StopController {
     }
 
     @GetMapping("/stops")
-    public ResponseEntity<?> getStops(){
-        List<StopDto> stops;
-        try {
-            stops = stopService.findAllStopsDto();
-            return new ResponseEntity<>(stops, HttpStatus.OK);
-        } catch (IOException e) {
-            return new ResponseEntity<>(e.getMessage(),HttpStatus.INTERNAL_SERVER_ERROR);
-        }
+    public ResponseEntity<?> getStops() throws IOException {
+
+        List<StopDto> stops = stopService.findAllStopsDto();
+        return new ResponseEntity<>(stops, HttpStatus.OK);
 
     }
 
     @GetMapping("/path")
     public ResponseEntity<?> findPath(@RequestParam("source") String source,
-                                      @RequestParam("target") String target){
-        try {
-            PathDto shortestPath = linkService.getShortestPath(source, target);
-            return new ResponseEntity<>(shortestPath, HttpStatus.OK);
-        } catch (IOException e) {
-            return new ResponseEntity<>(e.getMessage(),HttpStatus.INTERNAL_SERVER_ERROR);
-        }
+                                      @RequestParam("target") String target) throws IOException {
 
+        PathDto shortestPath = linkService.getShortestPath(source, target);
+        return new ResponseEntity<>(shortestPath, HttpStatus.OK);
     }
 }
