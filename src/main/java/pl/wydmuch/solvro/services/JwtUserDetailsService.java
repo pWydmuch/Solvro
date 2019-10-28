@@ -11,6 +11,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import pl.wydmuch.solvro.exceptions.MyAuthenticationException;
 import pl.wydmuch.solvro.exceptions.UserAlreadyExistsException;
 import pl.wydmuch.solvro.dto.UserDto;
 import pl.wydmuch.solvro.model.User;
@@ -54,13 +55,13 @@ public class JwtUserDetailsService implements UserDetailsService {
     }
 
 
-    public void authenticate(String username, String password) throws Exception {
+    public void authenticate(String username, String password) throws MyAuthenticationException {
         try {
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
         } catch (DisabledException e) {
-            throw new Exception("USER_DISABLED", e);
+            throw new MyAuthenticationException("USER_DISABLED", e);
         } catch (BadCredentialsException e) {
-            throw new Exception("INVALID_CREDENTIALS", e);
+            throw new MyAuthenticationException("INVALID_CREDENTIALS", e);
         }
     }
 

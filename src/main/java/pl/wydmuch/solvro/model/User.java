@@ -2,13 +2,12 @@ package pl.wydmuch.solvro.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name ="my_users")
 public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -17,10 +16,6 @@ public class User {
 
     @JsonIgnore
     private String password;
-
-
-    public User() {
-    }
 
     public Long getId() {
         return id;

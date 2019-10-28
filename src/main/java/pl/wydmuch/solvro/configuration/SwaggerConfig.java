@@ -1,6 +1,12 @@
 package pl.wydmuch.solvro.configuration;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import springfox.documentation.builders.ApiInfoBuilder;
+import springfox.documentation.builders.PathSelectors;
+import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.service.ApiInfo;
+import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
@@ -9,7 +15,27 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class SwaggerConfig {
 
+    public static final String AUTHORIZATION_HEADER = "Authorization";
+
+    @Bean
     public Docket swaggerApi(){
-        return new Docket(DocumentationType.SWAGGER_2);
+        return new Docket(DocumentationType.SWAGGER_2)
+                .groupName("solvro-api")
+                .apiInfo(apiInfo())
+                .select()
+                .apis(RequestHandlerSelectors.basePackage("pl.wydmuch.solvro.controllers"))
+                .paths(PathSelectors.any())
+                .build();
+    }
+
+    private ApiInfo apiInfo() {
+        return new ApiInfoBuilder()
+                .title("Solvro City API")
+                .description("API for project being recruitment task for Solvro scientific circle")
+                .contact(new Contact("Patryk Wydmuch",
+                        "http://pwydmuch.software/",
+                        "patryk.wydmuch@outlook.com"))
+                .version("1.0.0")
+                .build();
     }
 }
