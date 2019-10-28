@@ -10,7 +10,9 @@ import org.springframework.stereotype.Component;
 import pl.wydmuch.solvro.model.Stop;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,7 +32,8 @@ public class JsonParser<T> {
     public List<T> retrieveData(String nodeName, Class<T> contentClass) throws IOException {
         List<T> objectsList;
         JavaType type = objectMapper.getTypeFactory().constructParametricType(List.class, contentClass);
-        JsonNode jsonNode = objectMapper.readTree(new File(PATH));
+        InputStream is = TypeReference.class.getResourceAsStream(PATH);
+        JsonNode jsonNode = objectMapper.readTree(is);
         JsonNode objectNode = jsonNode.get(nodeName);
         objectsList = objectMapper.readValue(objectNode.toString(),type);
         return objectsList;
