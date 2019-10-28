@@ -1,13 +1,12 @@
 package pl.wydmuch.solvro.model;
 
-import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Stop {
 
     Long id;
 
-    @JsonAlias("stop_name")
+    @JsonProperty("stop_name")
     String name;
 
     public Long getId() {
