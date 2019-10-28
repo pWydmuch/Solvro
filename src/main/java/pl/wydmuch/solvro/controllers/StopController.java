@@ -1,8 +1,12 @@
 package pl.wydmuch.solvro.controllers;
 
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,6 +17,7 @@ import pl.wydmuch.solvro.services.StopService;
 import java.io.IOException;
 import java.util.List;
 
+@CrossOrigin("${allowedOrigin:*}")
 @RestController
 public class StopController {
 
@@ -26,6 +31,10 @@ public class StopController {
         this.linkService = linkService;
     }
 
+    @ApiOperation(value = "Get all stops available",
+                 response = StopDto.class,
+                 responseContainer = "List" )
+    @ApiImplicitParam(name = "Authorization", value = "Access Token", required = true, paramType = "header",  example = "Bearer access_token")
     @GetMapping("/stops")
     public ResponseEntity<?> getStops() throws IOException {
 
@@ -33,10 +42,12 @@ public class StopController {
         return new ResponseEntity<>(stops, HttpStatus.OK);
 
     }
-
+    @ApiOperation(value = "Find shortest path",
+                  response = PathDto.class )
+    @ApiImplicitParam(name = "Authorization", value = "Access Token", required = true, paramType = "header",  example = "Bearer access_token")
     @GetMapping("/path")
-    public ResponseEntity<?> findPath(@RequestParam("source") String source,
-                                      @RequestParam("target") String target) throws IOException {
+    public ResponseEntity<?> findPath(@RequestParam("source") @ApiParam(defaultValue = "Przystanek Solvrowy student PWr") String source,
+                                      @RequestParam("target") @ApiParam(defaultValue = "Przystanek Dziki javascriptowiec") String target) throws IOException {
 
         PathDto shortestPath = linkService.getShortestPath(source, target);
         return new ResponseEntity<>(shortestPath, HttpStatus.OK);

@@ -21,7 +21,7 @@ public class MyExceptionHandler extends ResponseEntityExceptionHandler {
         return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
     }
 
-    @ExceptionHandler(MyAuthenticationException.class)
+    @ExceptionHandler({MyAuthenticationException.class, SignatureException.class})
     public ResponseEntity<?> handleAuthentication(Exception e){
         return new ResponseEntity<>(e.getMessage(),HttpStatus.UNAUTHORIZED);
     }
@@ -31,8 +31,9 @@ public class MyExceptionHandler extends ResponseEntityExceptionHandler {
         return new ResponseEntity<>(e.getMessage(),HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
-    @ExceptionHandler(SignatureException.class)
-    public ResponseEntity<?> handleSignature(Exception e){
-        return new ResponseEntity<>(e.getMessage(),HttpStatus.FORBIDDEN);
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity handleOther(Exception e){
+        return new ResponseEntity<>(e.getMessage(),HttpStatus.INTERNAL_SERVER_ERROR);
     }
+
 }
