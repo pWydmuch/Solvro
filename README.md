@@ -4,7 +4,7 @@ Projekt ten jest realizacją [Zadania rekrutacyjnego](https://github.com/Solvro/
 do koła naukowego Solvro działającego na Politechnice Wrocławskiej
 
 Jego zadaniem było napisanie backendu do aplikacji imitującej działanie aplikacji JakDojade, a
-konkretniej, obliczenie najkrótszej możliwej drogi między dwoma przystankami, oraz podanie przystanków pośreniczących.
+konkretniej, obliczenie najkrótszej możliwej drogi między dwoma przystankami, oraz podanie przystanków pośredniczących.
 
 Aplikacja umożliwia również rejestracje i logowanie użytkowników.
 
