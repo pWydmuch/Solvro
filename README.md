@@ -15,9 +15,9 @@ Najłatwiej to osiągnąć korzystając z poniższej komendy
 
 Kiedy już to zrobisz, przejdź do folderu w którym znajduje się plik pom.xml i skorzystaj z poniższej instrukcji
 
-``` sh run-app.sh ```
+``` ./run-app.sh ```   
 
-Mimo, że 'sh' jest typową komendą Linuxa, możesz również powyższy skrypt odpalić na Windowsie korzystając np. z git-basha
+Mimo, że jest to typowe wywołanie skyptu dla Linuxa, możesz również powyższy skrypt wykonać na Windowsie korzystając np. z git-basha
 
 Gdyby z jakichś powodów apliacja nie działała poprzez dockera, można ją odpalić bez konteneryzacji, używająć poniższej instrukcji
  
@@ -25,7 +25,7 @@ Gdyby z jakichś powodów apliacja nie działała poprzez dockera, można ją od
 
 By wygenerować nowe miasto, skorzystaj z poniższej komendy (muszisz mieć zainstalowanego pythona)
 
-``` sh change-city.sh ```
+``` ./change-city.sh ```
 
 ### Użyte technologie
 
