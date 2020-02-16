@@ -1,10 +1,10 @@
 # Solvro city 
 
-Projekt ten jest realizacją [Zadania rekrutacyjnego](https://github.com/Solvro/rekrutacja#backend)
+Projekt ten jest realizacją [zadania rekrutacyjnego](https://github.com/Solvro/rekrutacja#backend)
 do koła naukowego Solvro działającego na Politechnice Wrocławskiej
 
 Jego zadaniem było napisanie backendu do aplikacji imitującej działanie aplikacji JakDojade, a
-konkretniej, obliczenie najkrótszej możliwej drogi między dwoma przystankami, oraz podanie przystanków pośreniczących.
+konkretniej, obliczenie najkrótszej możliwej drogi między dwoma przystankami, oraz podanie przystanków pośredniczących.
 
 Aplikacja umożliwia również rejestracje i logowanie użytkowników.
 
@@ -48,9 +48,9 @@ Do zaimplementowania wyszukiwania najkrótszej ścieżki użyłem algorytmu Dijk
 Aplikacja w celu zapewnienia bezpieczeństwa wykorzystuje protokół HTTPS używając certyfikatu, którego sam podpisałem, więc może powodować to różne ostrzeżenia np od przeglądarki.
 Chcąc przetestować aplikację w Postmanie należy w opcjach wyłączyć sprawdzanie certyfikatu SSL, a używając cURL-a dodać do zapytania flagę -k.
 
-Dostęp do endpointów /stop i /path się  odbywa nie na podstawie tokena JWT, otrzymanego po pomyślnym zalogowaniu. Token przekazuje się w nagłówku 'Authorization' w schamacie 'Bearer Token'  
+Dostęp do endpointów /stop i /path  odbywa się na podstawie tokena JWT, otrzymanego po pomyślnym zalogowaniu. Token przekazuje się w nagłówku 'Authorization' w schamacie 'Bearer Token'  
 
-Dokumentacja API z wykorzysatniem Swaggera jest dostępna pod endpoitem /swagger-ui.html
+Dokumentacja API z wykorzysatniem Swaggera jest dostępna pod endpointem /swagger-ui.html
 
 W celu zapewnienia niezależności od środowiska uruchomieniowego wykorzystałem Dockera.
 Projekt odpala się na dwóch kontenerach, jeden z aplikacją właściwą, a drugi z serwerem PostgreSQL.
@@ -58,8 +58,7 @@ By móc umożliwić komunikacje między tymi dwoma kontenerami użyłem Docker C
 aplikacja chciała się połączyć z bazą danych, gdy jeszcze ona wstawała, co powodowło błąd.
 By rozwiązać ten problem użyłem skryptu 'wait-for-it.sh', który nie pozwala odpalić się aplikacji, jeśli baza danych jeszcze nie jest gotowa.
 
-W bazie danych jest już przykładowy użytkownik
-```email: user@user.pl, password: zaq1@WSX```
+By umożliwić połączenie aplikacji z frontendem udostępniłem endpointy dla wszystkich originów, czego oczywiście nie powinno się robić w prawdziwych aplikacjach, ale zwiększa przenaszalności aplikacji.
  
 ### Co chiałbym jeszcze zrobić
 
