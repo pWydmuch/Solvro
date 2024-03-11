@@ -15,9 +15,8 @@ import java.util.stream.Collectors;
 @Service
 public class StopService {
 
-    StopRepository stopRepository;
+    private final StopRepository stopRepository;
 
-    @Autowired
     public StopService(StopRepository stopRepository) {
         this.stopRepository = stopRepository;
     }
@@ -25,7 +24,7 @@ public class StopService {
     public List<StopDto> findAllStopsDto() throws IOException {
         return stopRepository.findAll().stream()
                 .map(StopDto::new)
-                .collect(Collectors.toList());
+                .toList();
     }
 
     public List<Stop> findAllStops() throws IOException {

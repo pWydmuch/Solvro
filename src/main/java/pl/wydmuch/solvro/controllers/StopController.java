@@ -21,11 +21,10 @@ import java.util.List;
 @RestController
 public class StopController {
 
-    StopService stopService;
+    private final StopService stopService;
 
-    LinkService linkService;
+    private final LinkService linkService;
 
-    @Autowired
     public StopController(StopService stopService, LinkService linkService) {
         this.stopService = stopService;
         this.linkService = linkService;

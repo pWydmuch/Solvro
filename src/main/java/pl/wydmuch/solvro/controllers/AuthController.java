@@ -26,11 +26,10 @@ import javax.validation.Valid;
 @RestController
 public class AuthController {
 
-    private JwtUserDetailsService userService;
-    private JwtTokenUtil jwtTokenUtil;
+    private final JwtUserDetailsService userService;
+    private final JwtTokenUtil jwtTokenUtil;
 
 
-    @Autowired
     public AuthController(JwtUserDetailsService userService, JwtTokenUtil jwtTokenUtil) {
         this.userService = userService;
         this.jwtTokenUtil = jwtTokenUtil;

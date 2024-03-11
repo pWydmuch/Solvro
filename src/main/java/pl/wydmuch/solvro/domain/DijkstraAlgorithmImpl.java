@@ -3,7 +3,7 @@ package pl.wydmuch.solvro.domain;
 import java.util.*;
 
 
-public class DijkstraAlgorithmImpl implements DijkstraAlgorithm{
+public class DijkstraAlgorithmImpl implements DijkstraAlgorithm {
 
     private final List<Vertex> nodes;
     private final List<Edge> edges;
@@ -13,8 +13,8 @@ public class DijkstraAlgorithmImpl implements DijkstraAlgorithm{
     private Map<Vertex, Integer> distance;
 
     public DijkstraAlgorithmImpl(Graph graph) {
-        this.nodes = new ArrayList<>(graph.getVertexes());
-        this.edges = new ArrayList<>(graph.getEdges());
+        this.nodes = new ArrayList<>(graph.vertexes());
+        this.edges = new ArrayList<>(graph.edges());
     }
 
     @Override
@@ -35,7 +35,7 @@ public class DijkstraAlgorithmImpl implements DijkstraAlgorithm{
     }
 
     @Override
-    public int getDistance(Vertex target){
+    public int getDistance(Vertex target) {
         return distance.get(target);
     }
 
@@ -47,15 +47,13 @@ public class DijkstraAlgorithmImpl implements DijkstraAlgorithm{
         predecessors = new HashMap<>();
         distance.put(source, 0);
         unSettledNodes.add(source);
-        while (unSettledNodes.size() > 0) {
+        while (!unSettledNodes.isEmpty()) {
             Vertex node = getMinimum(unSettledNodes);
             settledNodes.add(node);
             unSettledNodes.remove(node);
             findMinimalDistances(node);
         }
     }
-
-
 
     private Vertex getMinimum(Set<Vertex> vertexes) {
         Vertex minimum = null;
@@ -70,6 +68,7 @@ public class DijkstraAlgorithmImpl implements DijkstraAlgorithm{
         }
         return minimum;
     }
+
     private int getShortestDistance(Vertex destination) {
         Integer d = distance.get(destination);
         if (d == null) {
@@ -96,14 +95,14 @@ public class DijkstraAlgorithmImpl implements DijkstraAlgorithm{
     private List<Vertex> getNeighbors(Vertex node) {
         List<Vertex> neighbors = new ArrayList<>();
         for (Edge edge : edges) {
-            Vertex first = edge.getFirstVertex();
-            Vertex second = edge.getSecondVertex();
+            Vertex first = edge.firstVertex();
+            Vertex second = edge.secondVertex();
             if (first.equals(node)
-             && !isSettled(second)) {
+                    && isNotSettled(second)) {
                 neighbors.add(second);
             }
             if (second.equals(node)
-                    && !isSettled(first)) {
+                    && isNotSettled(first)) {
                 neighbors.add(first);
             }
         }
@@ -112,21 +111,21 @@ public class DijkstraAlgorithmImpl implements DijkstraAlgorithm{
 
     private int getDistance(Vertex node, Vertex target) {
         for (Edge edge : edges) {
-            if (edge.getFirstVertex().equals(node)
-                    && edge.getSecondVertex().equals(target)) {
-                return edge.getWeight();
+            if (edge.firstVertex().equals(node)
+                    && edge.secondVertex().equals(target)) {
+                return edge.weight();
             }
-            if (edge.getSecondVertex().equals(node)
-                    && edge.getFirstVertex().equals(target)) {
-                return edge.getWeight();
+            if (edge.secondVertex().equals(node)
+                    && edge.firstVertex().equals(target)) {
+                return edge.weight();
             }
         }
-            throw new RuntimeException("Should not happen");
+        throw new RuntimeException("Should not happen");
     }
 
 
-    private boolean isSettled(Vertex vertex) {
-        return settledNodes.contains(vertex);
+    private boolean isNotSettled(Vertex vertex) {
+        return !settledNodes.contains(vertex);
     }
 
 

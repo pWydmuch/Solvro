@@ -13,9 +13,8 @@ public class LinkRepository {
 
     private static final String LINKS_JSON_NODE = "links";
 
-    JsonParser<Link> parser;
+    private final JsonParser<Link> parser;
 
-    @Autowired
     public LinkRepository(JsonParser<Link> parser) {
         this.parser = parser;
     }

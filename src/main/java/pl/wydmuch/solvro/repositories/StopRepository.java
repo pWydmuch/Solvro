@@ -13,9 +13,8 @@ public class StopRepository {
 
     private static final String STOPS_JSON_NODE = "nodes";
 
-    JsonParser<Stop> parser;
+    private final JsonParser<Stop> parser;
 
-    @Autowired
     public StopRepository(JsonParser<Stop> parser) {
         this.parser = parser;
     }

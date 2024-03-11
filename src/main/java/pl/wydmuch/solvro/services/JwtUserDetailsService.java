@@ -23,9 +23,9 @@ import java.util.ArrayList;
 public class JwtUserDetailsService implements UserDetailsService {
 
 
-    private UserRepository userRepository;
-    private PasswordEncoder passwordEncoder;
-    private AuthenticationManager authenticationManager;
+    private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
+    private final AuthenticationManager authenticationManager;
 
     public JwtUserDetailsService(UserRepository userRepository, @Lazy PasswordEncoder passwordEncoder, @Lazy AuthenticationManager authenticationManager) {
         this.userRepository = userRepository;

@@ -5,33 +5,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Link {
 
     @JsonProperty("source")
-    Long sourceId;
+    private Long sourceId;
     @JsonProperty("target")
-    Long targetId;
-    int distance;
+    private Long targetId;
+    private int distance;
 
     public Long getSourceId() {
         return sourceId;
-    }
-
-    public void setSourceId(Long sourceId) {
-        this.sourceId = sourceId;
     }
 
     public Long getTargetId() {
         return targetId;
     }
 
-    public void setTargetId(Long targetId) {
-        this.targetId = targetId;
-    }
-
     public int getDistance() {
         return distance;
-    }
-
-    public void setDistance(int distance) {
-        this.distance = distance;
     }
 
     @Override
