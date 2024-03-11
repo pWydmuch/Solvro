@@ -22,7 +22,7 @@ public class JsonParser<T> {
     @Value("${json.path}")
     private  String PATH;
 
-    ObjectMapper objectMapper;
+    private ObjectMapper objectMapper;
 
     @Autowired
     public JsonParser(ObjectMapper objectMapper) {
